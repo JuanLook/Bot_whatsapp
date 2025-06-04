@@ -1,5 +1,5 @@
-import { Client, LocalAuth, Message } from "whatsapp-web.js";
-import qrcode from "qrcode-terminal";
+import { Client, LocalAuth, Message } from "npm:whatsapp-web.js";
+import qrcode from 'npm:qrcode-terminal';
 import DataBase, { UserData } from "./data.ts";
 import { startConversation } from "./messages.ts";
 import { sendMenu } from "./menu.ts";

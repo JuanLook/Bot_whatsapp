@@ -1,5 +1,5 @@
 import { Client} from "whatsapp-web.js";
-import { UserData } from "./data";
+import { UserData } from "./data.ts";
 
 export async function startConversation(api: Client, user: UserData) {
    

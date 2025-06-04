@@ -1,2 +1,3 @@
-2025/06/03-15:29:16.498 c344 Creating DB C:\Users\juani\OneDrive\Área de Trabalho\chatbot\.wwebjs_auth\session\Default\Local Storage\leveldb since it was missing.
-2025/06/03-15:29:16.512 c344 Reusing MANIFEST C:\Users\juani\OneDrive\Área de Trabalho\chatbot\.wwebjs_auth\session\Default\Local Storage\leveldb/MANIFEST-000001
+2025/06/03-23:03:20.399 53c1 Reusing MANIFEST /home/suporte/Bot_whatsapp/.wwebjs_auth/session/Default/Local Storage/leveldb/MANIFEST-000001
+2025/06/03-23:03:20.400 53c1 Recovering log #3
+2025/06/03-23:03:20.400 53c1 Reusing old log /home/suporte/Bot_whatsapp/.wwebjs_auth/session/Default/Local Storage/leveldb/000003.log 

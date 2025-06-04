@@ -1,6 +1,6 @@
 import { Client } from "whatsapp-web.js";
-import { UserData } from "./data";
-import { startConversation } from "./messages";
+import { UserData } from "./data.ts";
+import { startConversation } from "./messages.ts";
 
 export const enum MenuOptions {
     PRODUTOS = "1",
@@ -10,7 +10,7 @@ export const enum MenuOptions {
     ATENDIMENTO = "5"
 
 }
-const GRUPO_ADM = "120363370058127166@g.us";
+const GRUPO_ADM = "@g.us";
 
 export async function sendMenu(api: Client, user: UserData) {
     
@@ -19,22 +19,10 @@ export async function sendMenu(api: Client, user: UserData) {
         case MenuOptions.PRODUTOS:
             
             await api.sendMessage(user.id, 
-                `*📦 Produtos Disponíveis:*\n\n` +
-                `📘 *Agenda/Planner* - a partir de *R$89,90*\n\n` +
-                ` Colorir *Boobie Goods (180g)*\n` +
-                `- 50 folhas: *R$49,99*     ` +
-                `- 70 folhas: *R$59,99*     ` +
-                `- 100 folhas: *R$85,99*\n\n` +
-                `🎒 *Etiqueta Escolar* (kit com 80 unidades) - *R$36,50*\n\n` +
-                `🎂 *Topos de Bolo*:\n` +
-                `- Camadas: a partir de *R$29,99*       ` +
-                `- Shaker: a partir de *R$49,99*\n\n` +
-                `🎁 *Caixas Cartonadas* - a partir de *R$20,00*\n\n` +
-                `📸 *Fotos Polaroides Mini* (10 unidades):\n` +
-                `- Sem ímã: *R$25,00*       ` +
-                `- Com ímã: *R$35,00*\n\n` +
-                `📖 *Reformas de Bíblias* - a partir de *R$55,00*\n\n`
+                `*📦 Serviço teste 1 *\n\n` +
+                `📘 Serviço teste 2 \n\n`
               );
+
                await api.sendMessage(user.id,`Deseja encomendar outro produto que não está na lista?\n                 [S] Sim   [N] Não`);
               api.on('message', async (message) => {
                 if (message.from === user.id) { // Verifica se a mensagem veio do usuário esperado
@@ -63,10 +51,13 @@ export async function sendMenu(api: Client, user: UserData) {
             await api.sendMessage(user.id, 'trabalhamos com as seguintes formas de entrega: \n \n Retirada no endereço *( cruzeiro novo/DF )* \n \n Entrega em até X dias úteis o preço varia de acordo com a região, para realizar o cálculo informe endereço completo com cep');
             break;
 
-        case MenuOptions.REDES_SOCIAIS:
+         case MenuOptions.REDES_SOCIAIS:
             await api.sendMessage(user.id, 
                 'Nos siga no instagram: \n' + 
-                'https://www.instagram.com/floffypaper/'
+                'https://www.instagram.com/jotas_ti/ \n \n' +
+                `Conheça também nosso linkedin:\n` +
+                `https://www.linkedin.com/company/jotasti/posts/?feedView=all`
+
             );
             
             break;
